@@ -9,7 +9,7 @@
 ###示例 2:
 输入: k = 3, n = 9
 输出: [[1,2,6], [1,3,5], [2,3,4]]
-##我的解法：
+##我的解法：//	1 ms	35.9 MB
 ```java
 public class text {
     List<List<Integer>> ans =new LinkedList<>();
@@ -57,7 +57,7 @@ public class text {
     }
 ```
 ##解法一：
-二进制（子集）枚举
+二进制（子集）枚举//2 ms	35.9 MB
 ```java
 class Solution {
     List<Integer> temp = new ArrayList<Integer>();
@@ -89,7 +89,7 @@ class Solution {
     }
 }
 ```
-##解法二：
+##解法二：//	1 ms	36.4 MB	Java
 ```java
 class Solution {
     List<Integer> temp = new ArrayList<Integer>();
