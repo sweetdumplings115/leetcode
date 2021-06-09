@@ -33,10 +33,6 @@ class Solution {
 原序列的每个位置在答案序列中的状态有被选中和不被选中两种，我们用 tt 数组存放已经被选出的数字
 在进入 dfs(cur,n) 之前[0,cur−1] 位置的状态是确定的，而[cur,n−1] 内位置的状态是不确定的，dfs(cur,n) 需要确定 \textit{cur}cur 位置的状态，然后求解子问题 dfs(cur+1,n)
 
-作者：LeetCode-Solution
-链接：https://leetcode-cn.com/problems/subsets/solution/zi-ji-by-leetcode-solution/
-来源：力扣（LeetCode）
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 ```
 class Solution {
     List<Integer> t = new ArrayList<Integer>();

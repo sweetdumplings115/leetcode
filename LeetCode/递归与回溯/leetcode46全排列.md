@@ -77,7 +77,6 @@ public class Solution {
             if (!used[i]) {
                 path.add(nums[i]);
                 used[i] = true;
-
                 dfs(nums, len, depth + 1, path, used, res);
                 // 注意：下面这两行代码发生 「回溯」，回溯发生在从 深层结点 回到 浅层结点 的过程，代码在形式上和递归之前是对称的
                 used[i] = false;
@@ -93,4 +92,48 @@ public class Solution {
         System.out.println(lists);
     }
 }
+```
+##易懂解法
+```
+import java.util.ArrayList;
+import java.util.List;
+
+public class text {
+
+        public List<List<Integer>> permute(int[] nums) {
+            // 使用一个动态数组保存所有可能的全排列
+            List<List<Integer>> res = new ArrayList<>();
+            LinkedList<Integer> path = new LinkedList<>();
+
+            if (nums.length == 0) {
+                return res;
+            }
+
+            dfs(nums, path, res);
+            return res;
+        }
+
+        private void dfs(int[] nums, LinkedList<Integer> path, List<List<Integer>> res) {
+            if (path.size() == nums.length) {
+                res.add(new LinkedList<>(path));
+                return;
+            }
+
+            // 在非叶子结点处，产生不同的分支，这一操作的语义是：在还未选择的数中依次选择一个元素作为下一个位置的元素，这显然得通过一个循环实现。
+            for (int i = 0; i <  nums.length; i++) {
+                if (!path.contains(nums[i])) {//避免重复选择一个数，但费时间，前面方法避免了此缺点
+                    path.add(nums[i]);//做选择
+                    dfs(nums,  path, res);//进入下一层决策树
+                    path.removeLast();//回溯撤销
+                }
+            }
+        }
+
+        public static void main(String[] args) {
+            int[] nums = {1, 2, 3};
+            text solution = new text();
+            List<List<Integer>> lists = solution.permute(nums);
+            System.out.println(lists);
+        }
+    }
 ```
