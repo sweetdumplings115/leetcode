@@ -12,7 +12,7 @@ k = 3
 首先考虑两种边界情况。
 如果 k=0，则不能建造任何跳水板，因此返回空数组。
 如果shorter和longer 相等，则建造的跳水板的长度是唯一的.
-```
+```java
 class Solution {
     public int[] divingBoard(int shorter, int longer, int k) {
         if (k == 0) {

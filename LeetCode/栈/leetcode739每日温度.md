@@ -6,7 +6,8 @@
 气温 列表长度的范围是 [1, 30000]。每个气温的值的均为华氏度，都是在 [30, 100] 范围内的整数。
 ##解法一：
 暴力
-```class Solution {
+```java
+class Solution {
     public int[] dailyTemperatures(int[] T) {
         int length = T.length;
         int[] ans = new int[length];//输出列表
@@ -41,7 +42,8 @@ for (遍历这个数组)
 		}
 		当前数据入栈;
 }  
-```class Solution {
+```java
+class Solution {
     public int[] dailyTemperatures(int[] T) {
         int length = T.length;
         int[] ans = new int[length];

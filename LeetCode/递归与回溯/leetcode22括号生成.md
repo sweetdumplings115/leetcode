@@ -10,7 +10,7 @@
 ##解法一：
 暴力法
 生成所有序列，再检查是否有效
-```
+```java
 class Solution {
     public List<String> generateParenthesis(int n) {
         List<String> combinations = new ArrayList<String>();
@@ -50,7 +50,7 @@ class Solution {
 ```
 ##解法二：
 剩余左括号总数要小于等于右括号
-```
+```java
 class Solution {
         List<String> res = new ArrayList<>();
         public List<String> generateParenthesis(int n) {

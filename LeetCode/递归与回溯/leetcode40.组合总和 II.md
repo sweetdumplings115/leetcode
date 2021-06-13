@@ -23,7 +23,7 @@ candidates 中的每个数字在每个组合中只能使用一次。
 ##解法一：回溯
 我们用 dfs(pos,rest) 表示递归的函数，其中pos 表示我们当前递归到了数组candidates 中的第pos 个数，而 rest 表示我们还需要选择和为 rest 的数放入列表作为一个组合；
 对于当前的第 pos 个数，我们有两种方法：选或者不选。如果我们选了这个数，那么我们调用dfs(pos+1,rest−candidates[pos]) 进行递归，注意这里必须满足 rest≥candidates[pos]。如果我们不选这个数，那么我们调用  dfs(pos+1,rest) 进行递归；
-```
+```java
 class Solution {
     List<int[]> freq = new ArrayList<int[]>();
     List<List<Integer>> ans = new ArrayList<List<Integer>>();

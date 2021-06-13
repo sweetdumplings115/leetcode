@@ -10,7 +10,7 @@
 ##解法一：
 迭代法实现子集枚举
 我们可以通过判断这种情况，来避免生成重复的子集。代码实现时，可以先将数组排序；迭代时，若发现没有选择上一个数，且当前数字与上一个数相同，则可以跳过当前生成的子集。
-```
+```java
 class Solution {
     List<Integer> t = new ArrayList<Integer>();
     List<List<Integer>> ans = new ArrayList<List<Integer>>();
@@ -41,7 +41,7 @@ class Solution {
 ##解法二：
 递归法实现子集枚举
 与方法一类似，在递归时，若发现没有选择上一个数，且当前数字与上一个数相同，则可以跳过当前生成的子集。
-```
+```java
 class Solution {
     List<Integer> t = new ArrayList<Integer>();
     List<List<Integer>> ans = new ArrayList<List<Integer>>();

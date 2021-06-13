@@ -6,7 +6,7 @@
 输出：[[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]
 ##解法一：
 迭代法实现子集枚举
-```
+```java
 记原序列中元素的总数为n。原序列中的每个数字 a_i 
 的状态可能有两种，即「在子集中」和「不在子集中」。我们用 1 表示「在子集中」，0 表示不在子集中，那么每一个子集可以对应一个长度为 n 的 0/1 序列，第 i 位表示 a_i是否在子集中。
 class Solution {
@@ -33,7 +33,7 @@ class Solution {
 原序列的每个位置在答案序列中的状态有被选中和不被选中两种，我们用 tt 数组存放已经被选出的数字
 在进入 dfs(cur,n) 之前[0,cur−1] 位置的状态是确定的，而[cur,n−1] 内位置的状态是不确定的，dfs(cur,n) 需要确定 \textit{cur}cur 位置的状态，然后求解子问题 dfs(cur+1,n)
 
-```
+```java
 class Solution {
     List<Integer> t = new ArrayList<Integer>();
     List<List<Integer>> ans = new ArrayList<List<Integer>>();

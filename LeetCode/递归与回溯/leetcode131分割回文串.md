@@ -8,7 +8,7 @@
 输入：s = "a"
 输出：[["a"]]
 ##解法一：
-```
+```java
 class Solution {
     boolean[][] f;
     List<List<String>> ret = new ArrayList<List<String>>();
@@ -52,7 +52,7 @@ class Solution {
 }
 ```
 ##解法二：
-```
+```java
 class Solution {
     int[][] f;
     List<List<String>> ret = new ArrayList<List<String>>();

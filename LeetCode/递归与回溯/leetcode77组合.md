@@ -15,7 +15,7 @@
 ##解法一：
 递归实现组合型枚举
 在进入 dfs(cur,n) 之前 [1,cur−1] 位置的状态是确定的，而[cur,n] 内位置的状态是不确定的，dfs(cur,n) 需要确定cur 位置的状态，然后求解子问题 dfs(cur+1,n)。
-```
+```java
 class Solution {
     List<Integer> temp = new ArrayList<Integer>();
     List<List<Integer>> ans = new ArrayList<List<Integer>>();
@@ -47,7 +47,7 @@ class Solution {
 ##解法二：
 把原序列中被选中的位置记为 1，不被选中的位置记为 0
 可以看出「对应的二进制数」一列包含了由 k 个 1 和 n−k 个 0 组成的所有二进制数
-```
+```java
 class Solution {
     List<Integer> temp = new ArrayList<Integer>();
     List<List<Integer>> ans = new ArrayList<List<Integer>>();

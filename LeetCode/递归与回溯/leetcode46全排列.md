@@ -10,7 +10,7 @@
 输入：nums = [1]
 输出：[[1]]
 ##解法一：
-```
+```java
 class Solution {
     public List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> res = new ArrayList<List<Integer>>();
@@ -42,7 +42,7 @@ class Solution {
 }
 ```
 ##解法二：
-```
+```java
 import java.util.ArrayList;
 import java.util.List;
 
@@ -94,7 +94,7 @@ public class Solution {
 }
 ```
 ##易懂解法
-```
+```java
 import java.util.ArrayList;
 import java.util.List;
 

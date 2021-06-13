@@ -25,7 +25,8 @@
 输出：true
 ##解法
 用栈stack
-```public class isValid {
+```java
+public class isValid {
     public static void main(String[] args) {
         Stack<Character>  stack= new Stack<>();
         String s=new Scanner(System.in).nextLine();
@@ -54,7 +55,8 @@
 }
 ```
 ##解法
-```class Solution {
+```java
+class Solution {
     public boolean isValid(String s) {
         int n = s.length();
         if (n % 2 == 1) {

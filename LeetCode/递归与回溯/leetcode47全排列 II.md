@@ -10,7 +10,7 @@
 输入：nums = [1,2,3]
 输出：[[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]
 ![alt 属性文本](47.png)
-```
+```java
 public class text {
    boolean[] used;
    int[] nums;
